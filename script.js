@@ -1,13 +1,22 @@
 // Create elements
+
+// Buttons
 const rockButton = document.createElement('button');
 rockButton.textContent = 'Rock';
 const paperButton = document.createElement('button');
 paperButton.textContent = 'Paper';
 const scissorsButton = document.createElement('button');
 scissorsButton.textContent = 'Scissors';
+
+// Scoreboard elements
 const player = document.createElement('p');
 const computer = document.createElement('p');
 const result = document.createElement('p');
+
+// Play again button
+const playAgain = document.createElement('button');
+playAgain.textContent = 'Play Again';
+playAgain.style.display = 'none';
 
 // Add them to the HTML
 const buttonContainer = document.getElementById('button-container');
@@ -18,6 +27,7 @@ buttonContainer.appendChild(scissorsButton);
 displayContainer.appendChild(player);
 displayContainer.appendChild(computer);
 displayContainer.appendChild(result);
+document.body.appendChild(playAgain);
 
 const getComputerChoice = () => {
   let choices = ['Rock', 'Paper', 'Scissors']; // Create an array to store game's options
@@ -73,12 +83,26 @@ const handleButtonClick = (event) => {
     rockButton.disabled = true;
     paperButton.disabled = true;
     scissorsButton.disabled = true;
+    playAgain.style.display = 'block';
   }
+};
+
+const handlePlayAgain = () => {
+  playerScore = 0;
+  computerScore = 0;
+  updateScore();
+  player.textContent = '';
+  computer.textContent = '';
+  rockButton.disabled = false;
+  paperButton.disabled = false;
+  scissorsButton.disabled = false;
+  playAgain.style.display = 'none';
 };
 
 rockButton.addEventListener('click', handleButtonClick);
 paperButton.addEventListener('click', handleButtonClick);
 scissorsButton.addEventListener('click', handleButtonClick);
+playAgain.addEventListener('click', handlePlayAgain);
 
 let playerScore = 0;
 let computerScore = 0;

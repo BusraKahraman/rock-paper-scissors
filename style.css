@@ -33,12 +33,12 @@ button {
 }
 
 button:hover {
-  background-color: indigo;
+  background-color: rgb(75, 0, 130);
   color: white;
 }
 
 button:active {
-  background-color: #3e8e41;
+  background-color: rgba(75, 0, 130, 0.3);
   box-shadow: 0 5px #666;
   transform: translateY(4px);
 }
