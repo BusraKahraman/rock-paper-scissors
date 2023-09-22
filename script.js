@@ -5,20 +5,19 @@ const paperButton = document.createElement('button');
 paperButton.textContent = 'Paper';
 const scissorsButton = document.createElement('button');
 scissorsButton.textContent = 'Scissors';
-const div = document.createElement('div');
 const player = document.createElement('p');
 const computer = document.createElement('p');
 const result = document.createElement('p');
 
-// Add them to html
-
-document.body.appendChild(rockButton);
-document.body.appendChild(paperButton);
-document.body.appendChild(scissorsButton);
-div.appendChild(player);
-div.appendChild(computer);
-div.appendChild(result);
-document.body.appendChild(div);
+// Add them to the HTML
+const buttonContainer = document.getElementById('button-container');
+const displayContainer = document.getElementById('display-container');
+buttonContainer.appendChild(rockButton);
+buttonContainer.appendChild(paperButton);
+buttonContainer.appendChild(scissorsButton);
+displayContainer.appendChild(player);
+displayContainer.appendChild(computer);
+displayContainer.appendChild(result);
 
 const getComputerChoice = () => {
   let choices = ['Rock', 'Paper', 'Scissors']; // Create an array to store game's options
