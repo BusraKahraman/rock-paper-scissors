@@ -49,3 +49,36 @@ button:active {
 #display-container {
   font-size: 24px;
 }
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  color: rgb(229 231 235);
+  background-color: rgb(31 41 55);
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+
+  div {
+    padding-top: 0.2rem;
+    padding-bottom: 0.2rem;
+
+    a {
+      font-weight: bold;
+      color: rgb(192 132 252);
+      text-decoration: none;
+
+      &:hover {
+        text-decoration-line: underline;
+      }
+
+      &:visited {
+        color: rgb(190 24 93);
+      }
+    }
+  }
+}
