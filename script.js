@@ -1,3 +1,5 @@
+const jsConfetti = new JSConfetti();
+
 // Create elements
 
 // Buttons
@@ -114,6 +116,7 @@ const updateScore = () => {
 const announceWinner = () => {
   if (playerScore === 5) {
     result.textContent = 'You win!';
+    jsConfetti.addConfetti();
   } else if (computerScore === 5) {
     result.textContent = 'You lost!';
   }
